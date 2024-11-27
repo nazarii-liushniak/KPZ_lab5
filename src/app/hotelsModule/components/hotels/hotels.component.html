@@ -1,0 +1,15 @@
+<div class="body">
+    <h2>Hotels</h2>
+    <div class="line"></div>
+    <button (click)="openModal()">Add Hotel</button>
+  
+    <div appHighlight class="appointments" *ngFor="let hotel of hotels">
+        <p class="name black-text">{{ hotel.name }}</p>
+        <p class="address black-text">{{ hotel.address }}</p>
+        <p class="phone_number black-text">{{ hotel.phoneNumber }}</p>
+        <p class="rating black-text">{{ hotel.rating }}</p>
+    </div>
+    
+    <app-hotels-modal *ngIf="isModalOpen" (closeModal)="closeModal()" (saveHotel)="onSaveHotel($event)"></app-hotels-modal>
+  </div>
+  

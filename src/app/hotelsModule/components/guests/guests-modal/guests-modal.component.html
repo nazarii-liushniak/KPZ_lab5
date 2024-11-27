@@ -1,0 +1,29 @@
+<div class="background">
+    <div class="modal">
+      
+      <div class="line"></div>
+
+      <div class="section">
+        <div class="section full_name">
+          <span class="section-title">Full Name</span>
+          <input class="black-text" type="text" [(ngModel)]="guest.fullName" placeholder="Enter full name">
+        </div>
+        <div class="section email">
+          <span class="section-value section-title">Email</span>
+          <input class="black-text" type="text" [(ngModel)]="guest.email" placeholder="Enter email">
+        </div>
+        <div class="section phone_number">
+            <span class="section-value section-title">Phone Number</span>
+            <input class="black-text" type="text" [(ngModel)]="guest.phoneNumber" placeholder="Enter phone number">
+          </div>
+      </div>
+  
+      <div class="line"></div>
+  
+      <div class="button-group">
+        <button class="cancel-button" (click)="closeModal.emit()">Cancel</button>
+        <button class="save-button" (click)="onSave()">Save</button>
+      </div>
+    </div>
+  </div>
+  

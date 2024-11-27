@@ -1,0 +1,16 @@
+<div class="body">
+    <h2>Bookings</h2>
+    <div class="line"></div>
+    <button (click)="openModal()">Add Booking</button>
+  
+    <div appHighlight class="appointments" *ngFor="let booking of bookings">
+        <p class="guest_id black-text">{{ booking.guestId }}</p>
+        <p class="hotel_id black-text">{{ booking.hotelId }}</p>
+        <p class="check_in_date black-text">{{ booking.checkInDate | dateFormat }}</p>
+        <p class="check_out_date black-text">{{ booking.checkOutDate | dateFormat }}</p>
+        <p class="total_price black-text">{{ booking.totalPrice }}</p>
+    </div>
+    
+    <app-bookings-modal *ngIf="isModalOpen" (closeModal)="closeModal()" (saveBooking)="onSaveBooking($event)"></app-bookings-modal>
+  </div>
+  

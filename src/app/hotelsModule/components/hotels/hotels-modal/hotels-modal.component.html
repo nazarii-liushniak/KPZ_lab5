@@ -1,0 +1,33 @@
+<div class="background">
+    <div class="modal">
+      
+      <div class="line"></div>
+
+      <div class="section">
+        <div class="section name">
+          <span class="section-title">Name</span>
+          <input class="black-text" type="text" [(ngModel)]="hotel.name" placeholder="Enter name">
+        </div>
+        <div class="section address">
+            <span class="section-value section-title">Address</span>
+            <input class="black-text" type="text" [(ngModel)]="hotel.address" placeholder="Enter address">
+          </div>
+        <div class="section phone_number">
+            <span class="section-value section-title">Phone Number</span>
+            <input class="black-text" type="text" [(ngModel)]="hotel.phoneNumber" placeholder="Enter phone number">
+        </div>
+        <div class="section rating">
+            <span class="section-value section-title">Rating</span>
+            <input class="black-text" type="text" [(ngModel)]="hotel.rating" placeholder="Enter rating">
+        </div>
+      </div>
+  
+      <div class="line"></div>
+  
+      <div class="button-group">
+        <button class="cancel-button" (click)="closeModal.emit()">Cancel</button>
+        <button class="save-button" (click)="onSave()">Save</button>
+      </div>
+    </div>
+  </div>
+  

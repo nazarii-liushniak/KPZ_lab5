@@ -1,0 +1,14 @@
+<div class="body">
+    <h2>Guests</h2>
+    <div class="line"></div>
+    <button (click)="openModal()">Add Guest</button>
+  
+    <div appHighlight class="appointments" *ngFor="let guest of guests">
+        <p class="full_name black-text">{{ guest.fullName }}</p>
+        <p class="email black-text">{{ guest.email }}</p>
+        <p class="phone_number black-text">{{ guest.phoneNumber }}</p>
+    </div>
+    
+    <app-guests-modal *ngIf="isModalOpen" (closeModal)="closeModal()" (saveGuest)="onSaveGuest($event)"></app-guests-modal>
+  </div>
+  

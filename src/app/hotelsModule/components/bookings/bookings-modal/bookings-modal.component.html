@@ -1,0 +1,37 @@
+<div class="background">
+    <div class="modal">
+      
+      <div class="line"></div>
+
+      <div class="section">
+        <div class="section guest_id">
+          <span class="section-title">Guest ID</span>
+          <input class="black-text" type="text" [(ngModel)]="booking.guestId" placeholder="Enter guest ID">
+        </div>
+        <div class="section hotel_id">
+          <span class="section-value section-title">Hotel ID</span>
+          <input class="black-text" type="text" [(ngModel)]="booking.hotelId" placeholder="Enter hotel ID">
+        </div>
+        <div class="section check_in_date">
+            <span class="section-value section-title">Check In Date</span>
+            <input class="black-text" type="date" [(ngModel)]="booking.checkInDate" placeholder="Enter check in date">
+        </div>
+        <div class="section check_out_date">
+            <span class="section-value section-title">Check Out Date</span>
+            <input class="black-text" type="date" [(ngModel)]="booking.checkOutDate" placeholder="Enter check out date">
+        </div>
+        <div class="section total_price">
+            <span class="section-value section-title">Total Price</span>
+            <input class="black-text" type="text" [(ngModel)]="booking.totalPrice" placeholder="Enter total price">
+        </div>
+      </div>
+  
+      <div class="line"></div>
+  
+      <div class="button-group">
+        <button class="cancel-button" (click)="closeModal.emit()">Cancel</button>
+        <button class="save-button" (click)="onSave()">Save</button>
+      </div>
+    </div>
+  </div>
+  
