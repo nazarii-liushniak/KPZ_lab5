@@ -7,7 +7,7 @@ import { Booking } from '../interfaces/Booking';
   providedIn: 'root',
 })
 export class BookingService {
-  private apiUrl = 'http://localhost:5180/api/Bookings'; //TODO: change url
+  private apiUrl = 'http://imluft.azurewebsites.net/api/Bookings'; //TODO: change url
 
   constructor(private http: HttpClient) {}
 

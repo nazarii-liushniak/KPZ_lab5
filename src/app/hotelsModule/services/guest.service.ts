@@ -7,7 +7,7 @@ import { Guest } from '../interfaces/Guest';
   providedIn: 'root',
 })
 export class GuestService {
-  private apiUrl = 'http://localhost:5180/api/Guests'; //TODO: change url
+  private apiUrl = 'http://imluft.azurewebsites.net/api/Guests'; //TODO: change url
 
   constructor(private http: HttpClient) {}
 

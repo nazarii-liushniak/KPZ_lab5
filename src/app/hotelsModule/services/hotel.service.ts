@@ -7,7 +7,7 @@ import { Hotel } from '../interfaces/Hotel';
   providedIn: 'root',
 })
 export class HotelService {
-  private apiUrl = 'http://localhost:5180/api/Hotels'; //TODO: change url
+  private apiUrl = 'http://imluft.azurewebsites.net/api/Hotels'; //TODO: change url
 
   constructor(private http: HttpClient) {}
 
